@@ -6,7 +6,7 @@ import { Grid, Container } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import  Banner  from './Banner';
 
-const MovieList = () => {
+const NewMovies = () => {
   const [movies, setMovies] = useState([]);
   const [searchTerm, setSearchTerm] = useState("man");
   const navigate = useNavigate();
@@ -22,7 +22,7 @@ const MovieList = () => {
   return (
     
     <Container sx={{ mt: 5, padding: 2 }}>
-      <Banner/>
+      
   <SearchBar onSearch={(term) => setSearchTerm(term)} />
   <Grid container spacing={3} justifyContent="center">
     {movies.map((movie) => (
@@ -44,4 +44,4 @@ const MovieList = () => {
   );
 };
 
-export default MovieList;
+export default NewMovies;
